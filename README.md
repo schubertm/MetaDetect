@@ -31,3 +31,10 @@ cd MetaDetect/
 * time
 * tqdm==4.42.1
 * xgboost==1.2.1
+
+**3. Preparing data:**
+
+Prepare a folder (e.g. "prediction") with a subfolder called "csv". Save the predictions **before Non-Maximum Suppression (NMS)** in the subfolder "csv" in the following way:
+
+* save a .csv-file for every image (e.g. "image_name".csv) and save every prediction before NMS line by line with the following columns:
+* [file_path	xmin	ymin	xmax	ymax	s	category_idx	prob_sum	prob_0	prob_1	prob_2	prob_3	prob_4	prob_5	prob_6	prob_7	dataset_box_id]
